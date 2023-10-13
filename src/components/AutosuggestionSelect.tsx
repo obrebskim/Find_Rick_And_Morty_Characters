@@ -25,7 +25,6 @@ export function AutosuggestionSelect() {
   const inputRef = useRef<HTMLInputElement | null>(null);
   useClickOutside(selectRef, toggle);
   useEscape(toggle);
-  useFocusOnActive(isActive, inputRef);
 
   const isLoadingOrError = isLoading || isError;
 
