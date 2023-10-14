@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 type Output = string;
 
@@ -7,7 +7,6 @@ export const useDebounce = (
   milliseconds: number = 500
 ): Output => {
   const [debouncedValue, setDebouncedValue] = useState(value);
-  const timeoutIdRef = useRef<number | null>(null);
 
   useEffect(() => {
     const id = setTimeout(() => {
